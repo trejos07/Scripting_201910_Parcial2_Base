@@ -37,8 +37,9 @@ public class Player : Character
             SpawnBullet();
         }
     }
-    private void OnDestroy()
+    protected override void OnDeath()
     {
+        base.OnDeath();
         SceneManager.LoadScene(0);
     }
 
