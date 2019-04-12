@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Character
 {
@@ -36,4 +37,9 @@ public class Player : Character
             SpawnBullet();
         }
     }
+    private void OnDestroy()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

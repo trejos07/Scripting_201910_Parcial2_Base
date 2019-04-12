@@ -5,7 +5,6 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField]
     private float damage = 10F;
-
     private Character instigator;
 
     private Rigidbody myRigidbody;
@@ -15,6 +14,7 @@ public class Bullet : MonoBehaviour
         get { return instigator; }
         set { instigator = value; }
     }
+
 
     public void Shoot(Character character)
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7131870060049509632}
   - component: {fileID: 2951985020770171891}
   - component: {fileID: 7626219911522818387}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
   targetAI: {fileID: 6349166343564486779}
   children:
   - {fileID: 0}
-  LookDistance: 10
+  LookDistance: 15
 --- !u!1 &5584547027553436463
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 956357518657735525}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BulletSpawnPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,9 +110,9 @@ GameObject:
   - component: {fileID: 6821025070962531246}
   - component: {fileID: 3489165492403236555}
   - component: {fileID: 4809843613923941399}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AI
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -226,6 +226,7 @@ MonoBehaviour:
   shootForce: 20
   bulletSpawnPosition: {fileID: 956357518657735525}
   start: {fileID: 2312840360793357233}
+  agent: {fileID: 4809843613923941399}
 --- !u!114 &2312840360793357233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextState: {fileID: 6821025070962531246}
-  warnigd: 20
+  warnigd: 30
 --- !u!114 &6821025070962531246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,8 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextState: {fileID: 3489165492403236555}
-  warnigd: 20
-  agrod: 10
+  warnigd: 30
+  agrod: 15
 --- !u!114 &3489165492403236555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextState: {fileID: 6821025070962531246}
   btRoot: {fileID: 2951985020770171891}
-  agrod: 10
+  agrod: 15
 --- !u!195 &4809843613923941399
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -303,7 +304,7 @@ GameObject:
   - component: {fileID: 8363528243517050916}
   - component: {fileID: 4381480945899143430}
   - component: {fileID: 3990176969835693295}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}

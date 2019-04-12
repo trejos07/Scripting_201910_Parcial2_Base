@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-
-
     public static BulletPool Instance;
 
     [SerializeField]private Bullet bullet;
@@ -29,10 +27,10 @@ public class BulletPool : MonoBehaviour
     {
         if (objects.Count > 0)
         {
-            Bullet obj = objects[objects.Count - 1];
+            Bullet obj = objects[0];
             obj.transform.position = pos;
             obj.transform.rotation = rot;
-            objects.Remove(objects[objects.Count - 1]);
+            objects.Remove(objects[0]);
             return obj;
         }
         else

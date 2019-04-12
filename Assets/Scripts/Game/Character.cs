@@ -52,7 +52,7 @@ public abstract class Character : MonoBehaviour
     {
         if (bullet != null && bulletSpawnPosition != null)
         {
-           BulletPool.Instance.GetBulletAt(bulletSpawnPosition.position, transform.rotation).Shoot(this);
+           BulletPool.Instance.GetBulletAt(bulletSpawnPosition.position, bulletSpawnPosition.rotation).Shoot(this);
         }
     }
 }
