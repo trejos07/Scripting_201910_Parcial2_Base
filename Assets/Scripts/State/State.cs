@@ -1,13 +1,19 @@
 ﻿using UnityEngine;
+using System;
 
 public abstract class State : MonoBehaviour
 {
     [SerializeField]
     private State nextState;
 
+    public State NextState { get => nextState; set => nextState = value; }
+
     public abstract void Execute();
 
-    private void SwitchToNextState()
+    public delegate void StateChange(State state);
+    public event StateChange OnStateChange;
+
+    public void SwitchToNextState()
     {
         if (nextState != null)
         {
@@ -22,7 +28,10 @@ public abstract class State : MonoBehaviour
 
         if (val)
         {
-            Execute();
+            if(OnStateChange!=null)
+            {
+                OnStateChange(this);
+            }
         }
     }
 }

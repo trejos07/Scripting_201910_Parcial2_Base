@@ -2,14 +2,30 @@
 
 public class RunBT : State
 {
-    [SerializeField]
-    protected Root btRoot;
+    [SerializeField] protected Root btRoot;
+    Transform player;
+    [SerializeField] float agrod;
+
+
+    private void Awake()
+    {
+        player = FindObjectOfType<Player>().transform;
+    }
 
     public override void Execute()
     {
-        if (btRoot != null)
+        float d = Vector3.Distance(transform.position, player.position);
+        if (d <= agrod)
         {
-            btRoot.Execute();
+            if (btRoot != null)
+            {
+                btRoot.Execute();
+            }
         }
+        else
+        {
+            SwitchToNextState();
+        }
+        
     }
 }

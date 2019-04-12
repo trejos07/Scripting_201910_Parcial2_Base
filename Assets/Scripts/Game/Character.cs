@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(Collider))]
@@ -25,7 +26,7 @@ public abstract class Character : MonoBehaviour
     }
 
     public float ShootForce { get { return shootForce; } }
-
+    
     public void ModifyHP(float delta)
     {
         HP += delta;
@@ -47,11 +48,11 @@ public abstract class Character : MonoBehaviour
         HP = maxHP;
     }
 
-    protected void SpawnBullet()
+    public void SpawnBullet()
     {
         if (bullet != null && bulletSpawnPosition != null)
         {
-            Instantiate<Bullet>(bullet, bulletSpawnPosition.position, transform.rotation).Shoot(this);
+           BulletPool.Instance.GetBulletAt(bulletSpawnPosition.position, transform.rotation).Shoot(this);
         }
     }
 }

@@ -25,12 +25,12 @@ public class Bullet : MonoBehaviour
     private void Awake()
     {
         myRigidbody = GetComponent<Rigidbody>();
-        Invoke("DestroyObject", 10F);
+        Invoke("DestroyObject", 5F);
     }
 
     private void DestroyObject()
     {
-        Destroy(gameObject);
+        BulletPool.Instance.ReturnToPool(this);
     }
 
     private void OnDestroy()
@@ -47,12 +47,15 @@ public class Bullet : MonoBehaviour
             if (character != null && instigator != character)
             {
                 character.ModifyHP(damage * -1);
+                DestroyObject();
             }
         }
-
-        if (collision.gameObject.Equals(instigator.gameObject))
+        if(instigator!=null)
         {
-            Destroy(gameObject);
+            if (collision.gameObject.Equals(instigator.gameObject))
+            {
+                DestroyObject();
+            }
         }
     }
 }

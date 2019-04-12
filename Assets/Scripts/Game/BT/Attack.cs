@@ -1,7 +1,26 @@
-﻿public class Attack : Task
+﻿using UnityEngine;
+
+public class Attack : Task
 {
+    [SerializeField] Character character;
+    [SerializeField] float cD;
+    bool canFire = true;
     public override bool Execute()
     {
-        throw new System.NotImplementedException();
+        if (canFire == true)
+        {
+            canFire = false;
+            character.SpawnBullet();
+            Invoke("resetCD", cD);
+            return true;
+        }
+        else
+            return false;
+        
+    }
+
+    void resetCD()
+    {
+        canFire = true;
     }
 }
