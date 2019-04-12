@@ -8,10 +8,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] int maxAis;
     [SerializeField] LayerMask layer;
 
+    public GameManager Instance;
+
     int ActiveAIs=0;
 
     private void Start()
     {
+        if (Instance == null)
+            Instance = this;
+
         SpawnAIs();
 
     }
