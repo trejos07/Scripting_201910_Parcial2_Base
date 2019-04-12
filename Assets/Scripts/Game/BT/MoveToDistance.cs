@@ -17,10 +17,12 @@ public class MoveToDistance : Task
         float d = Vector3.Distance(TargetAI.transform.position, player.position);
         if (d<=stopDistance)
         {
+            agent.isStopped = true;
             return false;
         }
         else
         {
+            agent.isStopped = false;
             agent.SetDestination(player.position);
             return true;
         }

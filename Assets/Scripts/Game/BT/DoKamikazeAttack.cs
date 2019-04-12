@@ -20,6 +20,7 @@ public class DoKamikazeAttack : Task
             Character P_character = player.GetComponent<Character>();
             P_character.ModifyHP(-Damage);
             M_character.ModifyHP(-M_character.HP);
+            collide = false;
             return true;
         }
         else

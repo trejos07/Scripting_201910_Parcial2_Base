@@ -29,7 +29,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetAI: {fileID: 3032360262781166300}
   agent: {fileID: 3510030313835992752}
-  stopDistance: 2.5
+  stopDistance: 5
 --- !u!114 &5407644160304930275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +58,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Attack Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 9205434777871308690, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: bulletSpawnPosition
+      value: 
+      objectReference: {fileID: 9172834810644414914}
+    - target: {fileID: 9205434777871308690, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: start
+      value: 
+      objectReference: {fileID: 5913510793958404374}
+    - target: {fileID: 9205434777871308690, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: agent
+      value: 
+      objectReference: {fileID: 3510030313835992752}
+    - target: {fileID: 2312840360793357233, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: nextState
+      value: 
+      objectReference: {fileID: 3215843465943535881}
+    - target: {fileID: 4809843613923941399, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: m_Speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489165492403236555, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: nextState
+      value: 
+      objectReference: {fileID: 3215843465943535881}
+    - target: {fileID: 3489165492403236555, guid: 3a7066fd5442749489947bcdd01e54f5,
+        type: 3}
+      propertyPath: btRoot
+      value: 
+      objectReference: {fileID: 6556766127607099732}
     - target: {fileID: 8378558171755224492, guid: 3a7066fd5442749489947bcdd01e54f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -113,31 +148,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9205434777871308690, guid: 3a7066fd5442749489947bcdd01e54f5,
-        type: 3}
-      propertyPath: bulletSpawnPosition
-      value: 
-      objectReference: {fileID: 9172834810644414914}
-    - target: {fileID: 9205434777871308690, guid: 3a7066fd5442749489947bcdd01e54f5,
-        type: 3}
-      propertyPath: start
-      value: 
-      objectReference: {fileID: 5913510793958404374}
-    - target: {fileID: 2312840360793357233, guid: 3a7066fd5442749489947bcdd01e54f5,
+    - target: {fileID: 6821025070962531246, guid: 3a7066fd5442749489947bcdd01e54f5,
         type: 3}
       propertyPath: nextState
       value: 
-      objectReference: {fileID: 3215843465943535881}
-    - target: {fileID: 3489165492403236555, guid: 3a7066fd5442749489947bcdd01e54f5,
-        type: 3}
-      propertyPath: nextState
-      value: 
-      objectReference: {fileID: 3215843465943535881}
-    - target: {fileID: 3489165492403236555, guid: 3a7066fd5442749489947bcdd01e54f5,
-        type: 3}
-      propertyPath: btRoot
-      value: 
-      objectReference: {fileID: 6556766127607099732}
+      objectReference: {fileID: 4784475605916509292}
     - target: {fileID: 2951985020770171891, guid: 3a7066fd5442749489947bcdd01e54f5,
         type: 3}
       propertyPath: targetAI
@@ -148,11 +163,6 @@ PrefabInstance:
       propertyPath: child
       value: 
       objectReference: {fileID: 2007506107186418676}
-    - target: {fileID: 6821025070962531246, guid: 3a7066fd5442749489947bcdd01e54f5,
-        type: 3}
-      propertyPath: nextState
-      value: 
-      objectReference: {fileID: 4784475605916509292}
     - target: {fileID: 7626219911522818387, guid: 3a7066fd5442749489947bcdd01e54f5,
         type: 3}
       propertyPath: targetAI
@@ -163,11 +173,6 @@ PrefabInstance:
       propertyPath: children.Array.data[0]
       value: 
       objectReference: {fileID: 5407644160304930275}
-    - target: {fileID: 4809843613923941399, guid: 3a7066fd5442749489947bcdd01e54f5,
-        type: 3}
-      propertyPath: m_Speed
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a7066fd5442749489947bcdd01e54f5, type: 3}
 --- !u!1 &3032360262781166300 stripped

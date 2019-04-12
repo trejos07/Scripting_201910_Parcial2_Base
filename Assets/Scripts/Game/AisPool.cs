@@ -27,7 +27,7 @@ public class AisPool : MonoBehaviour
     {
         if (objects.Count > 0)
         {
-            AICharacter obj = objects[objects.Count - 1];
+            AICharacter obj = objects[Random.Range(0,objects.Count)];
             obj.Agent.Warp(pos);
             objects.Remove(objects[objects.Count - 1]);
             obj.gameObject.SetActive(true);

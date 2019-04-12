@@ -20,12 +20,12 @@ public class Bullet : MonoBehaviour
     {
         Instigator = character;
         myRigidbody.AddForce(transform.forward * character.ShootForce, ForceMode.Impulse);
+        Invoke("DestroyObject", 5F);
     }
 
     private void Awake()
     {
         myRigidbody = GetComponent<Rigidbody>();
-        Invoke("DestroyObject", 5F);
     }
 
     private void DestroyObject()
