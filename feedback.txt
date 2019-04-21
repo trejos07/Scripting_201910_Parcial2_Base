@@ -1,0 +1,13 @@
+feedback
+
+Componente Práctico (3.0 / 5.0)
+* Por alguna razón, el disparo de las balas del juagador es errático (no siempre dispara al frente).
+* El pool de las balas funciona adecuadamente (0.4 / 0.4)
+* Es difícil probar el pool de los enemigos, pero parece estar funcionando adecuadamente (0.4 / 0.4)
+* Las instancias de los enemgios son restablecidas una vez mueren todas las instancias anteriores (0.7 / 0.7)
+* Los nodos de los BT están implementados y funcionan adecuadamente (1.5 / 1.5)
+* Los estados de los AI están implementados correctamente (1.0 / 1.0)
+* El readme explica adecuadamente la estrategia de implementación (1.0 / 1.0)
+* Penalización por extemporaneidad: -2.0
+
+Total: 3.0 / 5.0
